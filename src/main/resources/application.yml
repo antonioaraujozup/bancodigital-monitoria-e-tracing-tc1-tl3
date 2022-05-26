@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mariadb://localhost:3306/bdzup
+    username: root
+    password: root
+    driver-class-name: org.mariadb.jdbc.Driver
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "prometheus"
